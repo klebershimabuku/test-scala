@@ -16,7 +16,7 @@ Garanta que as respostas do webservice pareçam com os exemplos esperados abaixo
 
 ## Happy path
 
-    $ curl -i -XPOST http://localhost:8080/payments -d '{"customerId": 42, amount: 19.90}'
+    $ curl -i -XPOST http://localhost:8080/payments -d '{"customerId": 42, amount: 19.90}' -H "Content-type: application/json"
 
 
     HTTP/1.1 201 Created
@@ -33,7 +33,7 @@ STDOUT deve conter `Received a payment of 19.90 for customer 42`
 ## com errors
 
 
-    $ curl -i -XPOST http://localhost:8080/payments -d '{"customerId": 47, amount: 19.90}'
+    $ curl -i -XPOST http://localhost:8080/payments -d '{"customerId": 47, amount: 19.90}' -H "Content-type: application/json"
 
 
     HTTP/1.1 500 Internal server error
