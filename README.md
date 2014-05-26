@@ -1,3 +1,10 @@
+## Para implementar
+
+O {{PaymentsServiceImpl}} já implementa uma versão do do serviço de pagamentos onde a operação falha para qualquer cliente que não tenha o ID 42,
+é necessário amarrar essa operação com o controller que já está lá.
+Implemente algo que faça um auditoria assíncrona dessa operação de receber pagamentos: esta implementação simplesmente deve usar o {{logger}} para escrever uma mensagem que o usuário autenticado (usar o método {{currentUser}} já disponível no controller)
+Garanta que as respostas do webservice pareçam com os exemplos esperados abaixo.
+
 ## compiling and starting
 
 
