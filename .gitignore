@@ -1,0 +1,6 @@
+/target
+/.lib
+*.swp
+*.swo
+/project/target
+/project/project
