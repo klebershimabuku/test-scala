@@ -1,6 +1,6 @@
 ## Para implementar
 
-O `PaymentsServiceImpl` já implementa uma versão do do serviço de pagamentos onde a operação falha para qualquer cliente que *não* tenha o ID *42*,
+O `PaymentsServiceImpl` já implementa uma versão do serviço de pagamentos onde a operação falha para qualquer cliente que *não* tenha o ID *42*,
 é necessário amarrar essa operação com o controller que já está lá.
 Implemente algo que faça um auditoria assíncrona dessa operação de receber pagamentos: esta implementação deve usar o `logger` para escrever uma mensagem que o usuário autenticado (disponível no controller via o método `currentUser`)
 Garanta que as respostas do webservice pareçam com os exemplos esperados abaixo.
@@ -30,7 +30,7 @@ Garanta que as respostas do webservice pareçam com os exemplos esperados abaixo
 STDOUT deve conter `Received a payment of 19.90 for customer 42`
 
 
-## com errors
+## com erros
 
 
     $ curl -i -XPOST http://localhost:8080/payments -d '{"customerId": 47, amount: 19.90}' -H "Content-type: application/json"
