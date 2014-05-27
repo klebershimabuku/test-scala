@@ -13,6 +13,12 @@ Garanta que as respostas do webservice pareçam com os exemplos esperados abaixo
     > container:start
 
 
+## rodando specs
+
+
+    ./sbt
+    > test
+
 
 ## Happy path
 
