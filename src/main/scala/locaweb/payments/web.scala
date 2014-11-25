@@ -25,9 +25,16 @@ trait UserStub {
   lazy val currentUser = User("payments-worker")
 }
 
-class PaymentsController extends ScalatraServlet with UserStub with ErrorHandler {
+class PaymentsController extends ScalatraServlet with UserStub with ErrorHandler with Dependencies with jackson.JsonMethods {
+
+  implicit val formats = DefaultFormats
+
   post("/") {
-    // call paymentService.createPayment
+
+    val payment = parse(request.body).extract[Payment]
+
+    paymentService.createPayment(payment)
+
     // audit asynchonously
   }
 }
